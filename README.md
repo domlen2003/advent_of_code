@@ -9,7 +9,7 @@ This repository contains my solutions for the [Advent of Code](https://adventofc
 
 ## Overview
 
-Here you can see an overview of the completeness of the solutions in different languages:
+Here is an overview of the completeness of the solutions:
 
 | Day | Java |
 |--|--|
