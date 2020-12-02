@@ -17,51 +17,41 @@ public class Task1and2
     public static int find(String[] args, int method)
     {
         int rightPws = 0;
-        for(int i=0;i< args.length/3 ; i++)
+        for(int i=0; i< args.length/3; i++)
         {
             int start = i*3;
             int end = start+3;
             String[] part = Arrays.copyOfRange(args,start,end);
-            if(method==1) {
-                if (checkPassword(part[0], part[1], part[2])) rightPws++;
-            }
-            else {
-                if(checkPasswordPart2(part[0],part[1],part[2])) rightPws++;
+            ArrayList<String> numbers = new ArrayList<>();
+
+            Pattern p = Pattern.compile("\\d+");
+            Matcher m = p.matcher(part[0]);
+            while (m.find()) {
+                numbers.add(m.group());
             }
 
+            char searchChar = part[1].charAt(0);
+            int number1 = Integer.parseInt(String.valueOf(numbers.get(0)));
+            int number2 = Integer.parseInt(String.valueOf(numbers.get(1)));
+
+            if(method==1) {
+                if (checkPassword(searchChar, part[2],number1,number2)) rightPws++;
+            }
+            else {
+                if(checkPasswordPart2(searchChar,part[2],number1,number2)) rightPws++;
+            }
         }
         return rightPws;
     }
 
-    public static boolean checkPassword(String charCount, String character, String password)
+    public static boolean checkPassword(char searchChar, String password,int from,int to)
     {
-        ArrayList<String> numbers = new ArrayList<>();
-        Pattern p = Pattern.compile("\\d+");
-        Matcher m = p.matcher(charCount);
-        while (m.find()) {
-            numbers.add(m.group());
-        }
-
-        int from = Integer.parseInt(String.valueOf(numbers.get(0)));
-        int to = Integer.parseInt(String.valueOf(numbers.get(1)));
-        char searchChar = character.charAt(0);
         int occurrences = countOccurences(password,searchChar,0);
-
         return from <= occurrences && occurrences <= to;
     }
 
-    public static boolean checkPasswordPart2(String charCount, String character, String password)
+    public static boolean checkPasswordPart2(char searchChar , String password,int pointer1,int pointer2)
     {
-        ArrayList<String> numbers = new ArrayList<>();
-        Pattern p = Pattern.compile("\\d+");
-        Matcher m = p.matcher(charCount);
-        while (m.find()) {
-            numbers.add(m.group());
-        }
-
-        int pointer1 = Integer.parseInt(String.valueOf(numbers.get(0)));
-        int pointer2= Integer.parseInt(String.valueOf(numbers.get(1)));
-        char searchChar = character.charAt(0);
         char[] passwordChars = password.toCharArray();
 
         boolean first;
