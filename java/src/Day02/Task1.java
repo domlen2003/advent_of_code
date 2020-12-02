@@ -8,6 +8,14 @@ public class Task1
     public void start(String[] args)
     {
         for (String input : args) {
+List<String> numbers = new List<String>();
+
+Pattern p = Pattern.compile("\\d+");
+Matcher m = p.matcher(input); 
+while (m.find()) {
+   numbers.add(m.group());
+}
+
             int from = Integer.parseInt(String.valueOf(input.charAt(0)));
             int to = Integer.parseInt(String.valueOf(input.charAt(2)));
             char character = input.charAt(4);
