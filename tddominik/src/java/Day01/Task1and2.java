@@ -1,17 +1,12 @@
-package java.src.Day01;
+package tddominik.src.java.Day01;
 
 import java.util.ArrayList;
 
 public class Task1and2 {
 
-	ArrayList<Integer> intNumbers = new ArrayList<>();
+	static ArrayList<Integer> intNumbers = new ArrayList<>();
 
 	public static void main(String[] args) {
-		new Task1and2 ().start(args);
-	}
-
-	public void start(String[] args)
-	{
 		for (String numbers : args) {
 			intNumbers.add(Integer.parseInt(numbers));
 		}
@@ -19,7 +14,7 @@ public class Task1and2 {
 		System.out.println("Part 2: " + part2());
 	}
 
-	public int part1()
+	public static int part1()
 	{
 		int match1=0;
 		int match2=0;
@@ -37,7 +32,7 @@ public class Task1and2 {
 		return(match1*match2);
 	}
 
-	public int part2()
+	public static int part2()
 	{
 		int match1=0;
 		int match2=0;
