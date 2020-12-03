@@ -1,20 +1,24 @@
 package tddominik.src.java.Day01;
 
+import tddominik.src.java.utils.TxtReader;
+
+import java.io.File;
 import java.util.ArrayList;
 
 public class Task1and2 {
-
-	static ArrayList<Integer> intNumbers = new ArrayList<>();
+	private static final File inputFile = new File("tddominik/src/java/Day01/input.txt");
+	private static ArrayList<Integer> intNumbers = new ArrayList<>();
 
 	public static void main(String[] args) {
-		for (String numbers : args) {
+		String[] input = TxtReader.readfile(inputFile);
+		for (String numbers : input) {
 			intNumbers.add(Integer.parseInt(numbers));
 		}
 		System.out.println("Part 1: " + part1());
 		System.out.println("Part 2: " + part2());
 	}
 
-	public static int part1()
+	private static int part1()
 	{
 		int match1=0;
 		int match2=0;
@@ -32,7 +36,7 @@ public class Task1and2 {
 		return(match1*match2);
 	}
 
-	public static int part2()
+	private static int part2()
 	{
 		int match1=0;
 		int match2=0;
