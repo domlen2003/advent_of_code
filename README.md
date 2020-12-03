@@ -14,8 +14,8 @@ Here is an overview of the completeness of the solutions:
 | Day | Java |
 |--|--|
 |01|✅|
-|02|❌|
-|03|❌|
+|02|✅|
+|03|✅|
 |04|❌|
 |05|❌|
 |06|❌|
