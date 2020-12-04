@@ -1,4 +1,4 @@
-package tddominik.src.java.Day01;
+package tddominik.src.java.Days.Day01;
 
 import tddominik.src.java.utils.TxtReader;
 
@@ -6,7 +6,7 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class Task1and2 {
-	private static final File inputFile = new File("tddominik/src/java/Day01/input.txt");
+	private static final File inputFile = new File("tddominik/src/java/Days/Day01/input.txt");
 	private static ArrayList<Integer> intNumbers = new ArrayList<>();
 
 	public static void main(String[] args) {

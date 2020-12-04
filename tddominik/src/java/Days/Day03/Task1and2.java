@@ -1,4 +1,4 @@
-package tddominik.src.java.Day03;
+package tddominik.src.java.Days.Day03;
 
 import tddominik.src.java.utils.TxtReader;
 
@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 public class Task1and2 {
 
-	private static final File inputFile = new File("tddominik/src/java/Day03/input.txt");
+	private static final File inputFile = new File("tddominik/src/java/Days/Day03/input.txt");
 	private static final char treeSymbol='#';
 
 	public static void main(String[] args)

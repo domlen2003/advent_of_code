@@ -1,4 +1,4 @@
-package tddominik.src.java.Day04;
+package tddominik.src.java.Days.Day04;
 
 import tddominik.src.java.utils.TxtReader;
 
@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 
 public class Task1and2 {
 
-	private static final File inputFile = new File("tddominik/src/java/Day04/input.txt");
+	private static final File inputFile = new File("tddominik/src/java/Days/Day04/input.txt");
 	private static final Pattern HEXADECIMAL_PATTERN = Pattern.compile("\\p{XDigit}+");
 	public static void main(String[] args)
 	{
