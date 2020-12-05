@@ -37,6 +37,7 @@ Here is an overview of the completeness of the solutions:
 |22|❌|
 |23|❌|
 |24|❌|
+|25|❌|
 
 ❌   : No solution,
 ✅   : Full solution
