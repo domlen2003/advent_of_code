@@ -14,10 +14,6 @@ public class Task1and2 {
 	public static void main(String[] args)
 	{
 		ArrayList<passportData> parsedData = parsePassportData(TxtReader.readfile(inputFile));
-		/*for(passportData data:parsedData)
-		{
-			System.out.println(data.toString());
-		}*/
 		System.out.println("Part 1: "+ Part1(parsedData));
 		System.out.println("Part 2: "+ Part2(parsedData));
 	}
