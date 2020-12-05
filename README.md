@@ -16,8 +16,8 @@ Here is an overview of the completeness of the solutions:
 |01|✅|
 |02|✅|
 |03|✅|
-|04|❌|
-|05|❌|
+|04|✅|
+|05|✅|
 |06|❌|
 |07|❌|
 |08|❌|
