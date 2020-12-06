@@ -13,14 +13,8 @@ public class Task1and2 {
 
 	public static void main(String[] args) {
 		ArrayList<String[]> input= parseAnswerData(TxtReader.readfile(inputFile));
-
-		for(String[] group:input)
-		{
-			System.out.println(Arrays.toString(group));
-		}
 		System.out.println("Part 1: sum of Yes = "+ Part1(input));
 		System.out.println("Part 2: sum of united Yes = "+ Part2(input));
-
 	}
 
 	private static int Part1(ArrayList<String[]> input)
