@@ -18,7 +18,7 @@ Here is an overview of the completeness of the solutions:
 |03|✅|
 |04|✅|
 |05|✅|
-|06|❌|
+|06|✅|
 |07|❌|
 |08|❌|
 |09|❌|
