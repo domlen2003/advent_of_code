@@ -41,25 +41,13 @@ public class Task1and2 {
 	}
 
 	private static int Part2(String[] input) {
-		int i = 0;
-		String[] shinyGoldRule = null;
-		for (String rule : input) {
-			if ((rule.split(" ")[0] + " " + rule.split(" ")[1]).equals("shiny gold")) {
-				shinyGoldRule = Arrays.copyOfRange(rule.split(" "), 4, rule.split(" ").length);
-			}
-		}
-		System.out.println(Arrays.toString(shinyGoldRule));
-		for (int k = 0; k < Objects.requireNonNull(shinyGoldRule).length / 4; k++) {
-			i += countNested(shinyGoldRule[(k * 4 + 1)] + " " + shinyGoldRule[(k * 4 + 2)], Integer.parseInt(shinyGoldRule[k * 4]), input);
-		}
-		return i;
+		return countNested("shiny gold",1,input)-1;
 	}
 
 	private static int countNested(String bag, int amount,String[] input) {
 		int i = amount;
 		for (String rule : input) {
 			if((rule.split(" ")[0] + " " + rule.split(" ")[1]).equals(bag)) {
-				System.out.println(rule);
 				String[] nextRule = Arrays.copyOfRange(rule.split(" "), 4, rule.split(" ").length);
 				if(nextRule.length<4) return amount;
 				for (int k = 0; k < Objects.requireNonNull(nextRule).length / 4; k++) {
