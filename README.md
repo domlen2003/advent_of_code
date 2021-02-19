@@ -19,9 +19,9 @@ Here is an overview of the completeness of the solutions:
 |04|✅|
 |05|✅|
 |06|✅|
-|07|❌|
-|08|❌|
-|09|❌|
+|07|✅|
+|08|✅|
+|09|✅|
 |10|❌|
 |11|❌|
 |12|❌|
